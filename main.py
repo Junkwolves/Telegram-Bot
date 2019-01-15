@@ -19,7 +19,7 @@ def info(message, answer):
 def handle_text(message):
     user_markup = telebot.types.ReplyKeyboardMarkup(True, False)
     user_markup.row('Music')
-    bot.send_message(message.from_user.id, "Greetings my friend!!!", reply_markup = user_markup)
+    bot.send_message(message.from_user.id, "Greetings my friend!!! \n You just gonna scroll past without saying howdy?", reply_markup = user_markup)
     answer = "Command list"
     info(message, answer)
 
@@ -37,6 +37,7 @@ def handle_text(message):
     if message.text == "Howdy" or message.text == "howdy":
         answer =  "HOWDY PARTNER!" 
         bot.send_message(message.chat.id, "HOWDY PARTNER!")
+        bot.send_sticker(message.from_user.id, const.Howdy_id)
         info(message, answer)
 
     elif message.text == "Music":
