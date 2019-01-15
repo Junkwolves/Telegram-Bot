@@ -26,7 +26,7 @@ def handle_text(message):
 @bot.message_handler(commands=['help'])
 def handle_text(message):
     answer = "Доступные Треки: ..."
-    bot.send_message(message.chat.id, "  Доступные Треки: \n   1.  Енотик полоскун \n   2.   \n   3.   ")
+    bot.send_message(message.chat.id, "  \n   1.  /start  -  Bot Menu \n   2.   \n   3.   ")
     info(message, answer)
 
 @bot.message_handler(content_types=['text'])
