@@ -20,7 +20,7 @@ def handle_text(message):
     user_markup = telebot.types.ReplyKeyboardMarkup(True, False)
     user_markup.row('Музыка')
     user_markup.row('Гадза', 'Слава Украине!')
-    bot.send_message(message.from_user.id, "Greetings my friend!!! \n You just gonna scroll past without saying howdy?", reply_markup = user_markup)
+    bot.send_message(message.chat.id, "Greetings my friend!!! \n You just gonna scroll past without saying howdy?", reply_markup = user_markup)
     answer = "Command list"
     info(message, answer)
 
@@ -38,7 +38,49 @@ def handle_text(message):
     if message.text == "Howdy" or message.text == "howdy":
         answer =  "HOWDY PARTNER!" 
         bot.send_message(message.chat.id, "HOWDY PARTNER!")
-        bot.send_sticker(message.from_user.id, const.Howdy_id)
+        bot.send_sticker(message.chat.id, const.Howdy_id)
+        info(message, answer)
+
+    elif message.text == "Ban" or message.text == "ban" or message.text == "Бан" or message.text == "бан":
+        answer = "Бан"
+        bot.send_sticker(message.chat.id, const.Poroshenko_like)
+        bot.send_sticker(message.chat.id, const.Ban)
+        bot.send_sticker(message.chat.id, const.Ban)
+        bot.send_sticker(message.chat.id, const.Ban)
+        bot.send_sticker(message.chat.id, const.Ban)
+        bot.send_sticker(message.chat.id, const.Ban)
+        bot.send_sticker(message.chat.id, const.Poroshenko_like)
+        bot.send_sticker(message.chat.id, const.Ban)
+        bot.send_sticker(message.chat.id, const.Ban)
+        bot.send_sticker(message.chat.id, const.Ban)
+        bot.send_sticker(message.chat.id, const.Ban)
+        bot.send_sticker(message.chat.id, const.Ban)
+        bot.send_sticker(message.chat.id, const.Poroshenko_like)
+        bot.send_sticker(message.chat.id, const.Ban)
+        bot.send_sticker(message.chat.id, const.Ban)
+        bot.send_sticker(message.chat.id, const.Ban)
+        bot.send_sticker(message.chat.id, const.Ban)
+        bot.send_sticker(message.chat.id, const.Ban)
+        bot.send_sticker(message.chat.id, const.Poroshenko_like)
+        bot.send_sticker(message.chat.id, const.Ban)
+        bot.send_sticker(message.chat.id, const.Ban)
+        bot.send_sticker(message.chat.id, const.Ban)
+        bot.send_sticker(message.chat.id, const.Ban)
+        bot.send_sticker(message.chat.id, const.Ban)
+        bot.send_sticker(message.chat.id, const.Poroshenko_like)
+        bot.send_sticker(message.chat.id, const.Ban)
+        bot.send_sticker(message.chat.id, const.Ban)
+        bot.send_sticker(message.chat.id, const.Ban)
+        bot.send_sticker(message.chat.id, const.Ban)
+        bot.send_sticker(message.chat.id, const.Ban)
+        bot.send_sticker(message.chat.id, const.Poroshenko_like)
+        bot.send_sticker(message.chat.id, const.Ban)
+        bot.send_sticker(message.chat.id, const.Ban)
+        bot.send_sticker(message.chat.id, const.Ban)
+        bot.send_sticker(message.chat.id, const.Ban)
+        bot.send_sticker(message.chat.id, const.Ban)
+        bot.send_sticker(message.chat.id, const.Poroshenko_like)
+
         info(message, answer)
         
     elif message.text == "Назад" or message.text == "Меню":
@@ -46,7 +88,7 @@ def handle_text(message):
         user_markup = telebot.types.ReplyKeyboardMarkup(True, False)
         user_markup.row('Музыка')
         user_markup.row('Гадза', 'Слава Украине!')
-        bot.send_message(message.from_user.id, "Меню" , reply_markup = user_markup)
+        bot.send_message(message.chat.id, "Меню" , reply_markup = user_markup)
         info(message, answer)
 
     elif message.text == "Музыка":
@@ -56,55 +98,55 @@ def handle_text(message):
         user_markup.row('Тупа Отдыхаю')
         user_markup.row('Опа нихуёвая зигота')
         user_markup.row('Назад')
-        bot.send_message(message.from_user.id, "Доступные Треки: \n ", reply_markup = user_markup)
+        bot.send_message(message.chat.id, "Доступные Треки: \n ", reply_markup = user_markup)
         info(message, answer)
 
     elif message.text == "Енотик полоскун":
         answer =  "Енотик полоскун.mp3"
-        audio = open(".../Глад Валакас – Енотик полоскун.mp3", 'rb')
-        bot.send_chat_action(message.from_user.id, 'upload_audio')
-        bot.send_audio(message.from_user.id, audio)
+        audio = open("mp3/Глад Валакас – Енотик полоскун.mp3", 'rb')
+        bot.send_chat_action(message.chat.id, 'upload_audio')
+        bot.send_audio(message.chat.id, audio)
         audio.close()
         info(message, answer)
 
     elif message.text == "Тупа Отдыхаю":
         answer =  "Тупа Отдыхаю.mp3"
-        audio = open(".../Глад Валакас – Тупа Отдыхаю.mp3", 'rb')
-        bot.send_chat_action(message.from_user.id, 'upload_audio')
-        bot.send_audio(message.from_user.id, audio)
+        audio = open("mp3/Глад Валакас – Тупа Отдыхаю.mp3", 'rb')
+        bot.send_chat_action(message.chat.id, 'upload_audio')
+        bot.send_audio(message.chat.id, audio)
         audio.close()
         info(message, answer)
 
     elif message.text == "Опа нихуёвая зигота":
         answer =  "Опа нихуёвая зигота.mp3"
-        audio = open(".../Глад Валакас – Опа нихуёвая зигота.mp3", 'rb')
-        bot.send_chat_action(message.from_user.id, 'upload_audio')
-        bot.send_audio(message.from_user.id, audio)
+        audio = open("mp3/Глад Валакас – Опа нихуёвая зигота.mp3", 'rb')
+        bot.send_chat_action(message.chat.id, 'upload_audio')
+        bot.send_audio(message.chat.id, audio)
         audio.close()
         info(message, answer)
 
     elif message.text == "Слава Украине!":
         answer =  "Героям слава!"
         bot.send_message(message.chat.id, "Героям слава!")
-        voice = open(".../Глад Валакас – Гимн Украины.ogg", 'rb')
-        bot.send_chat_action(message.from_user.id, 'upload_audio')
-        bot.send_voice(message.from_user.id, voice)
+        voice = open("ogg/Глад Валакас – Гимн Украины.ogg", 'rb')
+        bot.send_chat_action(message.chat.id, 'upload_audio')
+        bot.send_voice(message.chat.id, voice)
         voice.close()
         info(message, answer)
 
     elif message.text == "Гадза" or message.text == "гадза":
         answer =  "Гадза"
-        voice = open(".../Глад Валакас – Годзила 3 4 5 0 Д.ogg", 'rb')
-        bot.send_chat_action(message.from_user.id, 'upload_audio')
-        bot.send_voice(message.from_user.id, voice)
+        voice = open("ogg/Глад Валакас – Годзила 3 4 5 0 Д.ogg", 'rb')
+        bot.send_chat_action(message.chat.id, 'upload_audio')
+        bot.send_voice(message.chat.id, voice)
         voice.close()
         info(message, answer)
         
     else:
         if const.counter == 1:
-            voice = open(".../Глад Валакас – КАВО.ogg", 'rb')
-            bot.send_chat_action(message.from_user.id, 'upload_audio')
-            bot.send_voice(message.from_user.id, voice)
+            voice = open("ogg/Глад Валакас – КАВО.ogg", 'rb')
+            bot.send_chat_action(message.chat.id, 'upload_audio')
+            bot.send_voice(message.chat.id, voice)
             voice.close()
 
             const.counter = 2
@@ -113,18 +155,21 @@ def handle_text(message):
 
         elif const.counter == 2:
             answer =  "Шо"
-            voice = open(".../Валакас – Шо.ogg", 'rb')
-            bot.send_chat_action(message.from_user.id, 'upload_audio')
-            bot.send_voice(message.from_user.id, voice)
+            voice = open("ogg/Валакас – Шо.ogg", 'rb')
+            bot.send_chat_action(message.chat.id, 'upload_audio')
+            bot.send_voice(message.chat.id, voice)
             voice.close()
 
             const.counter = 3
+
+            info(message, answer)
+			
         
         elif const.counter == 3:
             answer =  "СЛОЖНА"
-            voice = open(".../Папич – СЛОЖНА.ogg", 'rb')
-            bot.send_chat_action(message.from_user.id, 'upload_audio')
-            bot.send_voice(message.from_user.id, voice)
+            voice = open("ogg/Папич – СЛОЖНА.ogg", 'rb')
+            bot.send_chat_action(message.chat.id, 'upload_audio')
+            bot.send_voice(message.chat.id, voice)
             voice.close()
 
             const.counter = 4
@@ -133,14 +178,13 @@ def handle_text(message):
 
         elif const.counter == 4:
             answer =  "Завали ебало"
-            voice = open(".../Папич – Завали ебало.ogg", 'rb')
-            bot.send_chat_action(message.from_user.id, 'upload_audio')
-            bot.send_voice(message.from_user.id, voice)
+            voice = open("ogg/Папич – Завали ебало.ogg", 'rb')
+            bot.send_chat_action(message.chat.id, 'upload_audio')
+            bot.send_voice(message.chat.id, voice)
             voice.close()
 
             const.counter = 1
 
             info(message, answer)
-
 
 bot.polling(none_stop=True, interval=0)
