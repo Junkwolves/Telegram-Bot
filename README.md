@@ -13,4 +13,7 @@
 -  <p align="center"><b>Message_Voice.py:</b></p>
 ![GIF](https://raw.githubusercontent.com/Junkwolves/Telegram-Bot/master/Message_Voice/Message_Voice.gif)___________________________________________________________________________________________________________________________________
 
+-  <p align="center"><b>Message_Audio.py:</b></p>
+![GIF](https://raw.githubusercontent.com/Junkwolves/Telegram-Bot/master/Message_Audio/Message_Audio.gif)___________________________________________________________________________________________________________________________________
+
 - ### WIP:
