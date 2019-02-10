@@ -1,0 +1,8 @@
+def info(message, answer):
+    from datetime import datetime
+    print("   ----------------------------------------------------------------------------------------------" + "\n")
+    print("   | - Date  |  =  " + str(datetime.now()) + " \n")
+    print("   | - User  |  =  {0}.      |  {1}. ".format(message.from_user.first_name,message.from_user.last_name) + "\n")
+    print("   | UserID  |  =  {0}. ".format(str(message.from_user.id)) + "\n")
+    print("   | Message |  =  {0}. ".format(message.text) + "   | Answer |  =  " + answer + "\n")
+    print("   ----------------------------------------------------------------------------------------------" + "\n")
